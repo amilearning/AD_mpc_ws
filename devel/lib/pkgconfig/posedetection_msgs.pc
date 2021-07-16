@@ -1,0 +1,8 @@
+prefix=/home/hmcl/shared_dir/mpc_ws/devel
+
+Name: posedetection_msgs
+Description: Description of posedetection_msgs
+Version: 4.3.2
+Cflags: -I/home/hmcl/shared_dir/mpc_ws/devel/include -I/home/hmcl/shared_dir/mpc_ws/src/jsk_common_msgs/posedetection_msgs/include
+Libs: -L${prefix}/lib 
+Requires: roscpp std_msgs sensor_msgs geometry_msgs message_runtime

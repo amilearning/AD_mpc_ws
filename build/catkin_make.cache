@@ -1,0 +1,2 @@
+autoware_msgs:genesis_msgs:genesis_path_follower:jsk_common_msgs/jsk_common_msgs:jsk_common_msgs/jsk_footstep_msgs:jsk_common_msgs/jsk_gui_msgs:jsk_common_msgs/jsk_hark_msgs:jsk_common_msgs/posedetection_msgs:jsk_common_msgs/speech_recognition_msgs
+-DCATKIN_DEVEL_PREFIX=/home/hmcl/shared_dir/mpc_ws/devel -DCMAKE_INSTALL_PREFIX=/home/hmcl/shared_dir/mpc_ws/install -G Unix Makefiles

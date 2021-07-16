@@ -1,0 +1,8 @@
+prefix=/home/hmcl/shared_dir/mpc_ws/devel
+
+Name: speech_recognition_msgs
+Description: Description of speech_recognition_msgs
+Version: 4.3.2
+Cflags: -I/home/hmcl/shared_dir/mpc_ws/devel/include
+Libs: -L${prefix}/lib 
+Requires: std_msgs message_runtime

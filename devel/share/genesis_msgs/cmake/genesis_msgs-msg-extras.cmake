@@ -1,0 +1,2 @@
+set(genesis_msgs_MESSAGE_FILES "/home/hmcl/shared_dir/mpc_ws/src/genesis_msgs/msg/SteeringReport.msg;/home/hmcl/shared_dir/mpc_ws/src/genesis_msgs/msg/WheelSpeedReport.msg;/home/hmcl/shared_dir/mpc_ws/src/genesis_msgs/msg/VehicleImuReport.msg;/home/hmcl/shared_dir/mpc_ws/src/genesis_msgs/msg/LaneReport.msg;/home/hmcl/shared_dir/mpc_ws/src/genesis_msgs/msg/MandoObjectReport.msg;/home/hmcl/shared_dir/mpc_ws/src/genesis_msgs/msg/ESRTrackReport.msg;/home/hmcl/shared_dir/mpc_ws/src/genesis_msgs/msg/ESRValidReport.msg")
+set(genesis_msgs_SERVICE_FILES "")
