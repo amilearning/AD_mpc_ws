@@ -96,6 +96,7 @@ class StatePublisher(object):
 		
 		# rospy.Subscriber('/vehicle/steering', SteeringReport, self._parse_steering_angle, queue_size=1)
 		# rospy.Subscriber('/ctrl_feedback', TwistStamped, self._parse_steering_angle, queue_size=1)
+		rospy.Subscriber('/ctrl_feedback', TwistStamped, self._parse_steering_angle, queue_size=1)
 	
 		
 
@@ -191,6 +192,11 @@ class StatePublisher(object):
 		self.df = msg.angle  # -1*(msg.twist.angular.z+363.33) / 12.456 * 3.14195 / 180  # (rad)		
 		
 		self.tm_df = extract_ros_time(msg)
+
+	# def st_angle_callback(self, msg):  
+	# 	self.df = msg.angle  # -1*(msg.twist.angular.z+363.33) / 12.456 * 3.14195 / 180  # (rad)		
+		
+	# 	self.tm_df = extract_ros_time(msg)
 
 
 if __name__=='__main__':
