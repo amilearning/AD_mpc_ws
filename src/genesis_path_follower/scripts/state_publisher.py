@@ -89,8 +89,8 @@ class StatePublisher(object):
 
 		# rospy.Subscriber('/fix', NavSatFix, self._parse_gps_fix, queue_size=1)
 		rospy.Subscriber('/current_velocity', TwistStamped, self.vel_callback, queue_size=1)
-		rospy.Subscriber('/current_pose', PoseStamped, self._pose_callback, queue_size= 1)
-		rospy.Subscriber('/vehicle_status', VehicleStatus, self.sim_st_angle_callback, queue_size= 1)
+		rospy.Subscriber('/ndt_pose', PoseStamped, self._pose_callback, queue_size= 1)
+		# rospy.Subscriber('/vehicle_status', VehicleStatus, self.sim_st_angle_callback, queue_size= 1)
 
 		
 		
@@ -188,15 +188,15 @@ class StatePublisher(object):
 
 	
 
-	def sim_st_angle_callback(self, msg):  
-		self.df = msg.angle  # -1*(msg.twist.angular.z+363.33) / 12.456 * 3.14195 / 180  # (rad)		
-		
-		self.tm_df = extract_ros_time(msg)
-
-	# def st_angle_callback(self, msg):  
+	# def sim_st_angle_callback(self, msg):  
 	# 	self.df = msg.angle  # -1*(msg.twist.angular.z+363.33) / 12.456 * 3.14195 / 180  # (rad)		
 		
 	# 	self.tm_df = extract_ros_time(msg)
+
+	def _parse_steering_angle(self, msg):  
+		self.df = -1*(msg.twist.angular.z+363.33) / 12.456 * 3.14195 / 180  # (rad)		
+		
+		self.tm_df = extract_ros_time(msg)
 
 
 if __name__=='__main__':
